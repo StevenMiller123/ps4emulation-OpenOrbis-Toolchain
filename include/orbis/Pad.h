@@ -38,12 +38,13 @@ int32_t scePadSetVibration(int32_t handle, const OrbisPadVibeParam *param);
 int32_t scePadOutputReport(int32_t handle, int32_t type, uint8_t *report,
                            int32_t length);
 int32_t scePadSetMotionSensorState(int32_t handle, bool bEnable);
-int scePadReadExt(int handle, OrbisPadData *data, int count);
-int scePadReadStateExt(int handle, OrbisPadData *data);
+int32_t scePadReadExt(int32_t handle, OrbisPadData *data, int count);
+int32_t scePadReadStateExt(int32_t handle, OrbisPadData *data);
+int32_t scePadDeviceClassGetExtendedInformation(
+    int32_t handle, OrbisPadDeviceClassExtendedInformation *pInfo);
 
 // The below functions are currently not reversed
 void scePadConnectPort();
-void scePadDeviceClassGetExtendedInformation();
 void scePadDeviceClassParseData();
 void scePadDeviceOpen();
 void scePadDisableVibration();

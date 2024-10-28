@@ -125,3 +125,36 @@ typedef struct _OrbisPadInformation {
   int32_t deviceClass;
   uint8_t unknown[8];
 } OrbisPadInformation;
+
+typedef struct OrbisPadDeviceClassExtendedInformation {
+  int32_t deviceClass;
+
+  uint8_t reserved[4];
+
+  union {
+    struct {
+      uint8_t capability;
+      uint8_t reserved1[1];
+      uint16_t maxPhysicalWheelAngle;
+      uint8_t reserved2[8];
+    } steeringWheel;
+
+    struct {
+      uint8_t capability;
+      uint8_t quantityOfSelectorSwitch;
+      uint8_t reserved[10];
+    } guitar;
+
+    struct {
+      uint8_t capability;
+      uint8_t reserved[11];
+    } drum;
+
+    struct {
+      uint8_t capability;
+      uint8_t reserved[11];
+    } flightStick;
+
+    uint8_t data[12];
+  } classData;
+} OrbisPadDeviceClassExtendedInformation;
