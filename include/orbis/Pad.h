@@ -37,6 +37,10 @@ int32_t scePadResetOrientation(int32_t handle);
 int32_t scePadSetVibration(int32_t handle, const OrbisPadVibeParam *param);
 int32_t scePadOutputReport(int32_t handle, int32_t type, uint8_t *report,
                            int32_t length);
+int32_t scePadSetProcessPrivilege(int32_t privilage);
+int32_t scePadGetBluetoothAddress(int handle, uint64_t *BluetoothAddress);
+int32_t scePadOutputReport(int32_t handle, int32_t type, uint8_t *report,
+                           int32_t length);
 int32_t scePadSetMotionSensorState(int32_t handle, bool bEnable);
 int32_t scePadReadExt(int32_t handle, OrbisPadData *data, int count);
 int32_t scePadReadStateExt(int32_t handle, OrbisPadData *data);
@@ -54,7 +58,6 @@ void scePadEnableAutoDetect();
 void scePadEnableExtensionPort();
 void scePadEnableSpecificDeviceClass();
 void scePadEnableUsbConnection();
-void scePadGetBluetoothAddress();
 void scePadGetCapability();
 void scePadGetDataInternal();
 void scePadGetDeviceId();
@@ -96,7 +99,6 @@ void scePadSetLightBarBlinking();
 void scePadSetLightBarForTracker();
 void scePadSetLoginUserNumber();
 void scePadSetProcessFocus();
-void scePadSetProcessPrivilege();
 void scePadSetProcessPrivilegeOfButtonRemapping();
 void scePadSetTiltCorrectionState();
 void scePadSetUserColor();
