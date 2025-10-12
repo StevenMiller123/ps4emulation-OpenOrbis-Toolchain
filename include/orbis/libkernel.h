@@ -50,7 +50,7 @@ int32_t sceKernelAllocateDirectMemory(off_t, off_t, size_t, size_t, int32_t, off
 // Empty Comment
 int32_t sceKernelAllocateMainDirectMemory(size_t, size_t, int32_t, off_t*);
 // Empty Comment
-int32_t sceKernelAvailableDirectMemorySize(off_t, off_t, size_t, off_t, size_t);
+int32_t sceKernelAvailableDirectMemorySize(off_t, off_t, size_t, off_t*, size_t*);
 // Empty Comment
 int32_t sceKernelAvailableFlexibleMemorySize(size_t*);
 // Empty Comment
