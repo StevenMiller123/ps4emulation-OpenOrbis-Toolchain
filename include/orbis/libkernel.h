@@ -50,7 +50,7 @@ int32_t sceKernelAllocateDirectMemory(off_t, off_t, size_t, size_t, int32_t, off
 // Empty Comment
 int32_t sceKernelAllocateMainDirectMemory(size_t, size_t, int32_t, off_t*);
 // Empty Comment
-int32_t sceKernelAvailableDirectMemorySize(off_t, off_t, size_t, off_t, size_t);
+int32_t sceKernelAvailableDirectMemorySize(off_t, off_t, size_t, off_t*, size_t*);
 // Empty Comment
 int32_t sceKernelAvailableFlexibleMemorySize(size_t*);
 // Empty Comment
@@ -64,7 +64,7 @@ int32_t sceKernelCancelEventFlag(OrbisKernelEventFlag, uint64_t, int32_t*);
 // Empty Comment
 int32_t sceKernelCancelSema(OrbisKernelSema, int32_t, int32_t*);
 // Empty Comment
-void sceKernelCheckedReleaseDirectMemory(off_t memstart, size_t memlen);
+int32_t sceKernelCheckedReleaseDirectMemory(off_t memstart, size_t memlen);
 // Empty Comment
 int sceKernelCheckReachability(char*);
 // Empty Comment
@@ -312,7 +312,15 @@ int32_t sceKernelMapNamedDirectMemory(void **, size_t, int32_t, int32_t, off_t, 
 // Empty Comment
 int32_t sceKernelMapNamedFlexibleMemory(void **, size_t, int32_t, int32_t, const char *);
 // Empty Comment
-void sceKernelMapNamedSystemFlexibleMemory();
+int32_t sceKernelMapNamedSystemFlexibleMemory(void **, size_t, int32_t, int32_t, const char *);
+// Empty Comment
+int32_t sceKernelMemoryPoolExpand(off_t, off_t, size_t, size_t, off_t*);
+// Empty Comment
+int32_t sceKernelMemoryPoolReserve(void*, size_t, size_t, int32_t, off_t*);
+// Empty Comment
+int32_t sceKernelMemoryPoolCommit(void*, size_t, int32_t, int32_t, int32_t);
+// Empty Comment
+int32_t sceKernelMemoryPoolDecommit(void*, size_t, int32_t);
 // Empty Comment
 int32_t sceKernelMkdir(const char *path, OrbisKernelMode mode);
 // Empty Comment
