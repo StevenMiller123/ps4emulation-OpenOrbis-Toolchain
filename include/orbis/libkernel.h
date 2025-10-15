@@ -316,7 +316,7 @@ int32_t sceKernelMapNamedSystemFlexibleMemory(void **, size_t, int32_t, int32_t,
 // Empty Comment
 int32_t sceKernelMemoryPoolExpand(off_t, off_t, size_t, size_t, off_t*);
 // Empty Comment
-int32_t sceKernelMemoryPoolReserve(void*, size_t, size_t, int32_t, off_t*);
+int32_t sceKernelMemoryPoolReserve(void*, size_t, size_t, int32_t, void**);
 // Empty Comment
 int32_t sceKernelMemoryPoolCommit(void*, size_t, int32_t, int32_t, int32_t);
 // Empty Comment
